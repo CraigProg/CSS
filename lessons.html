@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css"
+    <meta charset="UTF-8">
+    <title>Lessons</title>
+</head>
+<body>
+
+<!--SELECTORS-->
+
+<!--UNIVERSAL AND TYPE SELECTOR HTML TEXT-->
+    
+<div>Hello World!</div>
+<div>Hello again!</div>
+<p>Hi</p>
+<div>Okay, bye</div>
+
+<!--CLASS SELECTOR HTML TEXT. YOU CAN MAKE AN ELEMENT INTO MULTIPLE CLASSES BY USING A SPACE. IN THIS CASE THE CLASSES ARE alert-text and emergency-->
+
+<div class="alert-text emergency">
+    Please agree to our terms of service.
+  </div>
+
+<!--ID SELECTOR HTML TEXT. ID IS SAME AS CLASS BUT CAN ONLY BE USED ONCE-->
+
+  <div id="title">My Awesome 90's Page</div>
+
+<!--GROUPING SELECTOR HTML TEXT-->
+<div class="ex1">
+    This is Ex1. It shares attributes with Ex2, but they are also different in some ways
+</div>
+<div class="ex2">
+    This is Ex2. It shares attributes with Ex2 but they are also different in some ways.
+</div>
+
+<!--CHAINING SELECTORS. Both the following elements are class subsection, but only the first is also class header-->
+<div>
+    <div class="subsection header">Latest Posts</div>
+    <p class="subsection preview">This is where a preview for a post might go.</p>
+  </div>
+
+<!--DESCENDENT COMBINATORS-->
+<div class="ancestor">
+    Text A <!-- A -->
+    <div class="contents">
+        Text B <!-- B -->
+      <div class="contents">
+          Text C <!-- C -->
+      </div>
+    </div>
+  </div>
+<div class="contents">Text D</div> <!-- D -->
+</body>
+
+<!--PROPERTIES-->
+</html>

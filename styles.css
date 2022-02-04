@@ -1,0 +1,50 @@
+/*SELECTORS-->
+<!--This is a UNIVERSAL SELECTOR and will select everything. These effects will be erased by following rules*/
+* {
+    color: purple;
+}
+
+/*TYP SELECTORS. This will only select items with div element*/
+div {
+    color: rgb(36, 33, 224);
+  }
+
+/*CLASS SELECTORS. This will only change thimgs within a class, which you give as an attribute. In this case, it is "alert-text"*/
+.alert-text {
+    color:red;
+}
+
+/*ID SELECTORS. Same as class selectors but IDs can only be used once and an element can only have one ID.*/
+#title {
+    background: red;
+}
+
+/*GROUPING SELECTORS. If two groups of selectors have some similar attributes, make it easier by changing the attributes toggehter using grouping selectors.
+You can still do separate selectors for the two to change the things that are unique about them.*/
+.ex1,
+.ex2 {
+    color: saddlebrown;
+}
+
+.ex1 {
+    background-color: seagreen;
+}
+
+.ex2 {
+    background-color: steelblue;
+}
+
+/*CHAINING SELECTORS Use this when you only want to select certain elements that have one element AND another.
+In this case we are looking for elements that have both the subsection AND header class*/
+.subsection.header {
+    color: red;
+  }
+
+/*DESCENDENT COMBINATORS. By using .example1 .example2, this will only select elements that ARE example2 that are NESTED within example1, no matter how far
+In this example, it will only grab elements B and C from the html text because they are the only elements classed as contents, nested within an ancestor class
+There is no limit to number of combinators. .ex1 .ex2 .ex3 .ex4 means it selects ex4 elements that are within ex3, that are within ex 2, that are within ex1*/
+.ancestor .contents {
+    background-color: teal;
+}
+
+/*PROPERTIES*/
