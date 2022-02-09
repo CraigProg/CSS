@@ -1,0 +1,38 @@
+
+/*COLOR FORMATS*/
+p {
+    /* hex example */
+    color: #1100ff
+    
+}
+ p {
+    /* rgb example */
+    color: rgb(100, 0, 127)
+ }
+
+ p {
+    /* hsl example */
+    color: hsl(25, 82%, 56%)
+ }
+
+ /*TEXT*/
+
+ p {
+    /*IT IS GOOD TO OFFER MULTIPLE FONT TYPES AS IF A BROWSER DOES NOT RECOGNIZE ONE, IT WILL GO TO THE NEXT. END ON A GENERIC FONT*/ 
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 25px;
+    /*FONT WEIGHT IS SET BETWEEN 1 AND 1000. 700 IS BOLD EQUIVALENT*/
+    font-weight: 700;
+    /*text-align ALIGNS TEXT ON THE HORIZONTAL PLANE*/
+    text-align: center;
+ }
+
+ /*IMAGES*/
+ img {
+     /*MAKE HEIGHT OR WIDTH AUTO SO THE IMAGE DOES NOT LOSE ASPECT RATIO WHEN BEING RESIZED
+     IT IS ALWAYS IMPORTANT TO DO THIS SO ENSURE THE AREA FOR THE PICTURE IS SAVED*/
+     height: auto;
+     width: 200px;
+ }
+
+ /*CSS CASCADING
