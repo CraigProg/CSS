@@ -35,4 +35,83 @@ p {
      width: 200px;
  }
 
- /*CSS CASCADING
+ /*CSS CASCADING*/
+/*THE SECOND SECTION TAKES PRECEDENCE BECAUSE IT
+ IS MORE SPECIFIC THAN THE FIRST BECAUSE IT USES MORE CLASS SELECTORS*/
+.subsection {
+   color: blue;
+ }
+ 
+ .main .list {
+   color: red;
+ }
+
+
+/*THE FIRST SECTION TAKES PRECEDENCE BECAUSE,
+EVEN THOUGH EXAMPLE 2 IS SELECTING TWO CLASSES,
+SECTION 1 IS SELECTING ID WHICH IS MORE SPECIFIC*/
+ #subsection {
+   color: blue;
+ }
+ 
+ .main .list {
+   color: red;
+ }
+
+/*THE SECOND SECTION TAKES PRECEDENCE BECAUSE THEY ARE BOTH USING ID
+AND CLASS SELECTORS. BUT SECTION 2 IS USING TWO CLASS SELECTORS.*/
+ #subsection .list {
+   background-color: yellow;
+   color: blue;
+ }
+ 
+ #subsection .main .list  {
+   color: red;
+ }
+
+ /*BOTH SECTIONS HAVE THE SAME SPECIFICITY BECAYSE CHAINING AND COMBINATOR
+ SELECTORS ARE CONSIDERED THE SAME LEVEL OF SPECIFICITY*/
+ .class.second-class {
+   font-size: 12px;
+ }
+ 
+ .class .second-class {
+   font-size: 24px;
+ }
+
+ /*SECTION 2 TAKES PRECEDENCE BECAUSE IT USES A TYPE SELECTOR WHICH IS LOWEST SPECIFICTY
+ WHILE SECTION 1 USES UNIVERSAL SELECTOR, WHICH HAS NO SPECIFICTY.*/
+ * {
+   color: black;
+ }
+ 
+ h1 {
+   color: orange;
+ }
+
+ /*this takes from the following code:
+
+ <div id="parent">
+  <div class="child"></div>
+</div>
+
+EVEN THOUGH SECTION 1 IS USING AN ID SELECTOR WHICH IS THE MOST SPECIFIC,
+IT IS ONLY SELECTING THE PARENT ID. CHILD THEN INHERITS IT FROM THE PARENT
+THE SECOND SECTION SELECTING CHILD BY NAME IS A HIGHER SPECIFICITY THAN ITS INHERITED TRAIT*/
+ #parent {
+   color: red;
+ }
+ 
+ .child {
+   color: blue
+ }
+
+/*IF ALL OTHER POINTS OF SPECIFICTY ARE CREATED EQUAL, THEN THE LAST RULE APPLIED TAKES PRORITY.
+HERE, SECTION 2 TAKES PRIORITY TO ANY ELEMENT THAT HAS BOTH ALERT AND WARNING CLASSES.*/
+.alert {
+   color: red;
+ }
+ 
+ .warning {
+   color: yellow;
+ }
