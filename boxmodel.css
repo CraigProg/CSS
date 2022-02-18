@@ -1,0 +1,37 @@
+/*USING BOX MODEL CAN HELP YOU UNDERSTAND WHAT IS NESTED WITHIN WHAT*/
+
+* {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.box-one {
+    background-color: #eb5757;
+    padding: 10px 5px 12px 30px;
+    height: 100px;
+    width: 100px;
+    border: 30px solid #9b51e0;
+    margin: 60px 40px 20px 10px;
+    align
+    /*IMPORTANT NOTE: HEIGHT IS ONLY THE HEIGHT OF THE CONTENT, IN THIS CASE 100
+    THE ACTUAL HEIGH OF OUR ELEMENT WILL END UP BEING 180PX BECAUSE ITS 100 FOR CONTENT
+    10 ON EACH SIDE FOR PADDING, AND 30 ON EACH SIDE FOR BORDER
+    IF YOU WANT TO ENSURE THAT THE ENTIRE ELEMENT (CONTENT+PADDING+BORDER) IS EQUAL TO THE HEIGHT YOU GAVE
+    YOU NEED TO USE
+    box-sizing: border-box;
+    THIS IS SUCH A COMMON TREND THAT IT IS OFTEN USED IN UNIVERSAL CLASS SELECTOR*/
+}
+
+.box-two {
+    background-color: #eb5757;
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    border: 30px solid #9b51e0;
+    /*IMPORTANT NOTE: WHEN TWO BOXES NEXT TO EACH OTHER HAVE MARGINS, IT WILL USE THE LARGEST OF THE TWO
+    IT WILL NOT COMBINE THE MARGINS*/
+    margin: 60px;
+}
